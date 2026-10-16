@@ -1,0 +1,81 @@
+---
+const steps = [
+  {
+    num: "01",
+    title: "Hubungi KukerEyes",
+    desc: "Mulai percakapan melalui WhatsApp untuk membahas kebutuhan bisnis Anda.",
+  },
+  {
+    num: "02",
+    title: "Sampaikan kebutuhan",
+    desc: "Jelaskan aplikasi, spesifikasi material, dan jumlah yang Anda perlukan.",
+  },
+  {
+    num: "03",
+    title: "Bahas pilihan material",
+    desc: "Konsultasikan pilihan serta informasi pemesanan sebelum melanjutkan.",
+  },
+];
+---
+
+<section id="alur" class="process">
+  <h2>Diskusikan kebutuhan dalam tiga langkah.</h2>
+  <div class="steps">
+    {
+      steps.map((step) => (
+        <div class="step">
+          <span class="mono num">{step.num}</span>
+          <h3>{step.title}</h3>
+          <p>{step.desc}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .process {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
+    padding: 64px var(--pad-x) 72px;
+    background: var(--color-bg-tint);
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .steps {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+  }
+  .step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 24px;
+  }
+  .num {
+    font-size: 14px;
+    color: var(--color-muted);
+  }
+  h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .step p {
+    font-size: 18px;
+    color: var(--color-muted);
+  }
+  @media (max-width: 900px) {
+    .steps {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+</style>

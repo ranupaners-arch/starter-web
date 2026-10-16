@@ -1,0 +1,117 @@
+---
+import Icon from "./Icon.astro";
+
+const categories = [
+  {
+    icon: "eyeglasses",
+    title: "Kacamata",
+    desc: "Material lensa optik untuk produsen, distributor lensa, dan pelaku usaha optik.",
+  },
+  {
+    icon: "biotech",
+    title: "Mikroskop",
+    desc: "Kaca optik untuk sistem mikroskop dan perangkat pembesaran.",
+  },
+  {
+    icon: "scan",
+    title: "Instrumen optik",
+    desc: "Material kaca untuk perangkat optik dan instrumen presisi.",
+  },
+  {
+    icon: "factory",
+    title: "Kebutuhan industri",
+    desc: "Material kaca optik untuk kebutuhan manufaktur dan aplikasi industri.",
+  },
+];
+---
+
+<section id="aplikasi" class="applications">
+  <div class="intro">
+    <h2>Kaca optik untuk<br />beragam aplikasi.</h2>
+    <p>
+      Dari material lensa kacamata hingga komponen instrumen, sampaikan aplikasi
+      yang Anda butuhkan untuk mendiskusikan pilihan material.
+    </p>
+  </div>
+  <div class="grid">
+    {
+      categories.map((cat) => (
+        <article class="card">
+          <Icon name={cat.icon} size={32} />
+          <h3>{cat.title}</h3>
+          <p>{cat.desc}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .applications {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    width: 100%;
+    padding: 64px var(--pad-x) 72px;
+  }
+  .intro {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: 100%;
+  }
+  .intro h2,
+  .intro p {
+    flex: 1;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--color-ink);
+  }
+  .intro p {
+    font-size: 19px;
+    color: var(--color-muted);
+  }
+  .grid {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+  }
+  .card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+    background: var(--color-bg-alt);
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  .card p {
+    font-size: 17px;
+    color: var(--color-muted);
+  }
+  @media (max-width: 1100px) {
+    .grid {
+      flex-wrap: wrap;
+    }
+    .card {
+      flex: 1 1 45%;
+    }
+    .intro {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+  }
+  @media (max-width: 700px) {
+    .card {
+      flex: 1 1 100%;
+    }
+  }
+</style>

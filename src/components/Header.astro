@@ -1,0 +1,45 @@
+---
+const navItems = [
+  { label: "Aplikasi", href: "#aplikasi" },
+  { label: "Keunggulan", href: "#keunggulan" },
+  { label: "Tentang", href: "#tentang" },
+  { label: "Alur konsultasi", href: "#alur" },
+];
+---
+
+<header class="site-header">
+  <span class="wordmark">KukerEyes</span>
+  <nav class="anchor-nav">
+    {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+  </nav>
+  <a class="btn" href="https://wa.me/6282258442647">Hubungi WhatsApp</a>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 24px var(--pad-x);
+  }
+  .wordmark {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--color-ink);
+  }
+  .anchor-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .anchor-nav a {
+    font-size: 16px;
+    color: var(--color-ink);
+  }
+  @media (max-width: 900px) {
+    .anchor-nav {
+      display: none;
+    }
+  }
+</style>

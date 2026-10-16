@@ -1,0 +1,83 @@
+---
+import Icon from "./Icon.astro";
+---
+
+<section id="tentang" class="about">
+  <div class="identity">
+    <h2>Mitra pasokan<br />kaca optik Anda<br />di Batam.</h2>
+    <div class="location">
+      <Icon name="map-pin" size={20} />
+      <span class="mono">BATAM, INDONESIA</span>
+    </div>
+  </div>
+  <div class="profile">
+    <p class="statement">
+      KukerEyes adalah supplier dan distributor kaca optik untuk kebutuhan
+      industri optik, peralatan laboratorium, dan instrumen presisi.
+    </p>
+    <p>
+      Kami berfokus pada kebutuhan bisnis dan institusi, mulai dari produsen
+      lensa dan toko optik hingga manufaktur instrumen, laboratorium penelitian,
+      serta institusi pendidikan.
+    </p>
+    <p>
+      Sampaikan aplikasi dan kebutuhan material Anda. Pembahasan dimulai melalui
+      konsultasi sebelum melanjutkan ke pemesanan.
+    </p>
+  </div>
+</section>
+
+<style>
+  .about {
+    display: flex;
+    gap: 96px;
+    width: 100%;
+    padding: 80px var(--pad-x);
+  }
+  .identity {
+    width: 440px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  h2 {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--color-ink);
+  }
+  .location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-muted);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  .profile {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .statement {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--color-ink);
+    line-height: 1.3;
+  }
+  .profile > p:not(.statement) {
+    font-size: 19px;
+    color: var(--color-muted);
+  }
+  @media (max-width: 1100px) {
+    .about {
+      flex-direction: column;
+      gap: 48px;
+    }
+    .identity {
+      width: 100%;
+    }
+  }
+</style>

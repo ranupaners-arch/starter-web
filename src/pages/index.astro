@@ -1,0 +1,42 @@
+---
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Applications from "../components/Applications.astro";
+import Advantages from "../components/Advantages.astro";
+import About from "../components/About.astro";
+import Process from "../components/Process.astro";
+import ContactCta from "../components/ContactCta.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KukerEyes | Material Kaca Optik Batam</title>
+    <meta
+      name="description"
+      content="KukerEyes — supplier & distributor kaca optik dan material lensa di Batam untuk kacamata, mikroskop, instrumen presisi, dan aplikasi industri."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <Hero />
+      <Applications />
+      <Advantages />
+      <About />
+      <Process />
+      <ContactCta />
+    </main>
+    <Footer />
+  </body>
+</html>

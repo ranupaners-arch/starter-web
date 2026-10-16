@@ -1,0 +1,109 @@
+---
+const applications = ["Kacamata", "Mikroskop", "Instrumen optik", "Aplikasi industri"];
+---
+
+<section class="hero">
+  <div class="hero-split">
+    <div class="main-message">
+      <h1>Material kaca optik<br />untuk kebutuhan<br />bisnis Anda.</h1>
+      <p class="lead">
+        KukerEyes menyediakan kaca optik dan material lensa untuk kacamata,
+        laboratorium, serta instrumen presisi. Konsultasikan kebutuhan material
+        sebelum memesan.
+      </p>
+      <a class="btn" href="https://wa.me/6282258442647">Konsultasi via WhatsApp</a>
+      <p class="mono identity">SUPPLIER &amp; DISTRIBUTOR KACA OPTIK · BATAM</p>
+    </div>
+    <div class="visual">
+      <div class="visual-frame"></div>
+      <p class="mono caption">ILUSTRASI MATERIAL · LENSA &amp; KACA OPTIK</p>
+    </div>
+  </div>
+  <div class="app-summary">
+    {applications.map((app) => <span class="app-item">{app}</span>)}
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    width: 100%;
+    padding: 68px var(--pad-x) 40px;
+  }
+  .hero-split {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    width: 100%;
+  }
+  .main-message {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  h1 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--color-ink);
+  }
+  .lead {
+    font-size: 20px;
+    color: var(--color-muted);
+  }
+  .identity {
+    font-size: 11px;
+    color: var(--color-muted);
+    letter-spacing: 0.08em;
+  }
+  .visual {
+    width: 568px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .visual-frame {
+    width: 100%;
+    height: 440px;
+    background: url("/images/hero-optical.png") center / cover no-repeat;
+  }
+  .caption {
+    font-size: 11px;
+    color: var(--color-muted);
+    letter-spacing: 0.08em;
+  }
+  .app-summary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 22px 0;
+  }
+  .app-item {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+  @media (max-width: 1100px) {
+    .hero-split {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .visual {
+      width: 100%;
+    }
+    h1 {
+      font-size: 44px;
+    }
+  }
+  @media (max-width: 700px) {
+    .app-summary {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+</style>

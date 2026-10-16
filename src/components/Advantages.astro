@@ -1,0 +1,96 @@
+---
+const points = [
+  {
+    title: "Pilihan material optik",
+    desc: "Pilihan kaca untuk berbagai kebutuhan lensa dan aplikasi optik.",
+  },
+  {
+    title: "Fokus pada kebutuhan bisnis",
+    desc: "Melayani kebutuhan manufaktur, laboratorium, dan institusi.",
+  },
+  {
+    title: "Aplikasi yang beragam",
+    desc: "Mencakup kacamata, mikroskop, serta instrumen optik lainnya.",
+  },
+  {
+    title: "Konsultasi sebelum pemesanan",
+    desc: "Komunikasikan kebutuhan material agar pembahasan lebih terarah.",
+  },
+];
+---
+
+<section id="keunggulan" class="advantages">
+  <div class="heading">
+    <h2>Mulai dari kebutuhan,<br />bukan sekadar<br />pilihan material.</h2>
+    <p>
+      Pendekatan B2B untuk membantu bisnis Anda membicarakan material sesuai
+      tujuan penggunaannya.
+    </p>
+  </div>
+  <div class="points">
+    {
+      points.map((pt) => (
+        <div class="point">
+          <h3>{pt.title}</h3>
+          <p>{pt.desc}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .advantages {
+    display: flex;
+    gap: 96px;
+    width: 100%;
+    padding: 72px var(--pad-x);
+    background: var(--color-ink);
+  }
+  .heading {
+    width: 440px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  h2 {
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--color-bg);
+  }
+  .heading p {
+    font-size: 19px;
+    color: var(--color-muted-dark);
+  }
+  .points {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .point {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 0;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-bg);
+  }
+  .point p {
+    font-size: 18px;
+    color: var(--color-muted-dark);
+  }
+  @media (max-width: 1100px) {
+    .advantages {
+      flex-direction: column;
+      gap: 48px;
+    }
+    .heading {
+      width: 100%;
+    }
+  }
+</style>
